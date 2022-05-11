@@ -1,30 +1,30 @@
-#Learning Resources
+# Learning Resources
 Sections will include:
 
-##Learning the Toolchain
+## Learning the Toolchain
 Here we will learn some basic toolchain to establish productive workflow.
-###terminal (powershell/wsl)
-###git
-###vs code
+### terminal (powershell/wsl)
+### git
+### vs code
 
-##Learning Python
+## Learning Python
 Here we will learn programming with python
-###Language Fundamentals
+### Language Fundamentals
 Learn Pythons grammar & syntax
-###Programming Fundamentals
+### Programming Fundamentals
 Learn If/Else, Loops, Functions
-###Using Packages
+### Using Packages
 Wield the power of thousands of devs
-###File Access
+### File Access
 Learn how to access/manipulate files
-###Input/Output
+### Input/Output
 Learn how to give input and receive output
-###Data Structures
+### Data Structures
 Learn the various ways we can structure our data
 
-##Learning Linux
+## Learning Linux
 Here we will learn Linux
-###file system
-###commands
-###pipes
-###bash
+### file system
+### commands
+### pipes
+### bash
