@@ -9,7 +9,7 @@ Here we will learn some basic toolchain to establish productive workflow.
 
 ## Learning Python
 Here we will learn programming with python
-### Language Fundamentals
+- ### Language Fundamentals
 Learn Pythons grammar & syntax
 ### Programming Fundamentals
 Learn If/Else, Loops, Functions
