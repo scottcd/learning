@@ -5,6 +5,8 @@ Sections will include:
 - terminal (powershell/wsl)
 - git
 - vs code
+- man
+- basic commands
 
 ## Learning Python
 - Language Fundamentals
@@ -16,6 +18,6 @@ Sections will include:
 
 ## Learning Linux
 - file system
-- commands
+- powerful commands
 - pipes
 - bash
