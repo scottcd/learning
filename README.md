@@ -1,23 +1,8 @@
 # Learning Resources
 Sections will include:
 
-## Learning the Toolchain
-- terminal (powershell/wsl)
-- git
-- vs code
-- man
-- basic commands
+## Learning Web Development
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
 
-## Learning Python
-- Language Fundamentals
-- Programming Fundamentals
-- Using Packages
-- File Access
-- Input/Output
-- Data Structures
-
-## Learning Linux
-- file system
-- powerful commands
-- pipes
-- bash
+## Learning Web Development
+Implement basic SSI with docker & nginx 

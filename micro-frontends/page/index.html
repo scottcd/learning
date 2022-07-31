@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Chandler Scott">
+        <meta name="description" content="A practice html file to run in a Docker nginx image.">
+
+        <title>Micro Frontends Practice</title>
+    </head>
+    <body>
+        <header>
+            <h1>Microfrontends -- SSI</h1>
+            <p>Using <strong><abbr title="server-side includes">SSI</abbr></strong> with nginx and Docker to implement a micro-frontend.</p>
+        </header>
+
+        <article>
+            <h3>Server-Side Includes</h3>
+            <p>The next section 
+            is all rendered in the server via nginx ssi (the user
+            receives the finished page). This can be independently 
+            updated and deployed. This can be 
+            further optimized for zero-downtime and much more!
+            </p>
+            
+            <hr>
+            <!--#include virtual="/team/" -->            
+            <hr>
+        </article>
+        
+        <footer>
+            <p>Developed by Chandler Scott</p>
+        </footer>
+    </body>
+</html>
