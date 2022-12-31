@@ -60,8 +60,10 @@ class App extends React.Component {
 
   // if nav menu is open and we click outside of it, close the nav menu.
   handleShellClick = (event) => {
-    if (this.state.navOpen === true && event.target.className != 'navBar') {
-      this.setState({ navOpen: false });
+    if (this.state.navOpen === true && event.target.className !== 'navBar') {
+      this.setState({ 
+        navOpen: false,  
+      });
     }
   }
 
