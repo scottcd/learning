@@ -31,15 +31,21 @@
 }
 
 .header-icon {
-  color: lightblue;
+  color: rgb(173, 216, 230);
   width: calc(1500px / 20);
   height: calc(2100px / 20);
-  margin: 15px 20px;
+  flex: 1 50px;
+  align-self: center;
+  margin: 10px 20px;
+  padding: 20px;
 }
 
 .header-icon:hover {
   cursor: pointer;
+  color:white;
+  border: 2px solid lightblue;
 }
+
 
 .app-content {
   flex: 5 100px;

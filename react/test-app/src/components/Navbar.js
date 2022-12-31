@@ -11,8 +11,8 @@ class Navbar extends React.Component {
     return (
       <div className='navBar' style={{background: bg}}>
         <FaArrowLeft className='navBar-icon' onClick={this.props.toggleNav}/>
-        <Link to="/">Home </Link>
-        <Link to="/two">Two</Link>
+        <Link className="navBar-item" to="/">Home </Link>
+        <Link className="navBar-item" to="/two">Two</Link>
       </div>
     );
   }

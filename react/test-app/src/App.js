@@ -48,7 +48,7 @@ class App extends React.Component {
       appHeader: <AppHeader shell={this} />,
       AppContent: <AppContent name='Chandler' />,
       AppFooter: <AppFooter />,
-      Navbar: <Navbar toggleNav={this.toggleNav} bgColor='blue'/>,
+      Navbar: <Navbar toggleNav={this.toggleNav} bgColor='white'/>,
     }
 
     this.toggleNav = this.toggleNav.bind(this);

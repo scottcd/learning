@@ -28,19 +28,32 @@
   }
 }
 
+
+
 @keyframes slideOutToLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
 }
 
 .navBar-icon {
-  color: lightblue;
+  margin: 10px 20px;
+  color: #282c34;
+  padding: 2.5%;
 }
 
 .navBar-icon:hover {
   cursor: pointer;
+  background-color: rgb(173, 216, 230, 0.3);
+}
+
+.navBar-item {
+  color:#282c34;
+}
+
+.navBar-item:hover {
+  background-color: rgb(173, 216, 230, 0.3);
 }
