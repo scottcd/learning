@@ -6,10 +6,14 @@ import Two from './pages/Two'
 import Navbar from './components/Navbar'
 import { FaSkull } from 'react-icons/fa'
 
-function AppHeader() {
+function AppHeader(props) {
   return (
     <header className='app-header'>
-      <FaSkull className='header-icon' onClick={() => { this.changeNavBarShowing() }} />
+      <div className='header-icon-container' onClick={() => {
+        props.shell.toggleNav();
+      }}>
+        <FaSkull className='header-icon' />
+      </div>
       <h1>A Fantastic Website</h1>
     </header>
   );
@@ -40,28 +44,34 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      appShell: ([
-        <AppHeader />,
-        <AppContent name='Chandler' />,
-        <AppFooter />,
-        <Navbar buttonClick={this.changeNavBarShowing} />,
-      ]),
-      navBarShowing: false,
+      navOpen: false,
+      appHeader: <AppHeader shell={this} />,
+      AppContent: <AppContent name='Chandler' />,
+      AppFooter: <AppFooter />,
+      Navbar: <Navbar toggleNav={this.toggleNav} bgColor='blue'/>,
     }
+
+    this.toggleNav = this.toggleNav.bind(this);
   }
 
-  changeNavBarShowing() {
-    this.setState({ navBarShowing: !this.navBarShowing })
-    console.log(this.state.navBarShowing)
+  toggleNav = () => {
+    this.setState({ navOpen: !this.state.navOpen });
+  }
+
+  // if nav menu is open and we click outside of it, close the nav menu.
+  handleShellClick = (event) => {
+    if (this.state.navOpen === true && event.target.className != 'navBar') {
+      this.setState({ navOpen: false });
+    }
   }
 
   render() {
     return (
-      <div className='app-shell'>
-        {this.state.appShell[0]}
-        {this.state.appShell[1]}
-        {this.state.appShell[2]}
-        {this.state.appShell[3]}
+      <div className='app-shell' onClick={this.handleShellClick}>
+        {this.state.appHeader}
+        {this.state.AppContent}
+        {this.state.AppFooter}
+        {this.state.navOpen ? this.state.Navbar : null}
       </div>
     );
   }

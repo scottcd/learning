@@ -2,7 +2,9 @@
   /* background-color: grey; */
   font-size: calc(10px + 2vmin);
   color: black;
-  background-color: grey;
+  background-color: white;
+  border-top: .1px solid #282c34;
+  border-right: .1px solid #282c34;
   position:absolute;
   position: fixed;
   display: flex;
@@ -14,6 +16,25 @@
   text-align: center;
   overflow: scroll;
   overflow-x: hidden;
+  animation: .3s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .navBar-icon {
