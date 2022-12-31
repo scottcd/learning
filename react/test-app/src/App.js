@@ -1,14 +1,15 @@
+import React from 'react';
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Two from './pages/Two'
 import Navbar from './components/Navbar'
-import pic from './pic.jpg';
+import { FaSkull } from 'react-icons/fa'
 
 function AppHeader() {
   return (
     <header className='app-header'>
-      <img className='header-image' src={pic}/>
+      <FaSkull className='header-icon' onClick={() => { this.changeNavBarShowing() }} />
       <h1>A Fantastic Website</h1>
     </header>
   );
@@ -18,7 +19,6 @@ function AppHeader() {
 function AppContent(props) {
   return (
     <div className='app-content'>
-      <Navbar/>
       <Routes>
         <Route path="/" element={Home()} exact />
         <Route path="/two" element={Two()} />
@@ -35,24 +35,36 @@ function AppFooter() {
   );
 }
 
-function App() {
-  // header
-  const headerSection = <AppHeader/>;
-  // content
-  const contentSection = <AppContent name='Chandler'/>
-  // footer
-  const footerSection = <AppFooter/>;
-  
-  // combine header, content, footer for app shell
-  const appShell = (
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      appShell: ([
+        <AppHeader />,
+        <AppContent name='Chandler' />,
+        <AppFooter />,
+        <Navbar buttonClick={this.changeNavBarShowing} />,
+      ]),
+      navBarShowing: false,
+    }
+  }
+
+  changeNavBarShowing() {
+    this.setState({ navBarShowing: !this.navBarShowing })
+    console.log(this.state.navBarShowing)
+  }
+
+  render() {
+    return (
       <div className='app-shell'>
-        {headerSection}
-        {contentSection}
-        {footerSection}
+        {this.state.appShell[0]}
+        {this.state.appShell[1]}
+        {this.state.appShell[2]}
+        {this.state.appShell[3]}
       </div>
     );
-
-  return ( appShell );
+  }
 }
 
 export default App;

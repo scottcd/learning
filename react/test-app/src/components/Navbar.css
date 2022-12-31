@@ -1,0 +1,25 @@
+.navBar {
+  /* background-color: grey; */
+  font-size: calc(10px + 2vmin);
+  color: black;
+  background-color: grey;
+  position:absolute;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: left;
+  width: 30%;
+  height: 100vh;
+  text-align: center;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.navBar-icon {
+  color: lightblue;
+}
+
+.navBar-icon:hover {
+  cursor: pointer;
+}
