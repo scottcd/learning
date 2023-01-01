@@ -9,10 +9,15 @@ class Navbar extends React.Component {
     const bg = this.props.bgColor;
 
     return (
-      <div className='navBar' style={{background: bg}}>
-        <FaArrowLeft className='navBar-icon' onClick={this.props.toggleNav}/>
-        <Link className="navBar-item" to="/">Home </Link>
-        <Link className="navBar-item" to="/two">Two</Link>
+      <div className='navBar' >
+        <div className="navBar-header">
+          <FaArrowLeft className='navBar-header-icon' onClick={this.props.toggleNav}/>
+          <h3 className="navBar-header-title">Views</h3>
+        </div>
+        <div className="navBar-links">
+          <Link className="navBar-link" to="/">Home</Link>
+          <Link className="navBar-link" to="/two">Placeholder</Link>
+        </div>
       </div>
     );
   }

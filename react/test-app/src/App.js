@@ -4,21 +4,8 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Two from './pages/Two'
 import Navbar from './components/Navbar'
-import { FaSkull } from 'react-icons/fa'
-
-function AppHeader(props) {
-  return (
-    <header className='app-header'>
-      <div className='header-icon-container' onClick={() => {
-        props.shell.toggleNav();
-      }}>
-        <FaSkull className='header-icon' />
-      </div>
-      <h1>A Fantastic Website</h1>
-    </header>
-  );
-}
-
+import AppHeader from './components/AppHeader'
+import AppFooter from './components/AppFooter'
 
 function AppContent(props) {
   return (
@@ -28,14 +15,6 @@ function AppContent(props) {
         <Route path="/two" element={Two()} />
       </Routes>
     </div>
-  );
-}
-
-function AppFooter() {
-  return (
-    <footer className='app-footer'>
-      site footer
-    </footer>
   );
 }
 
